@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторная работа</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="block">
+        <h1 class="zagl">Лабораторная работа №1</h1>
+        <h2 class="zagl2">Название: разработка механизмов <br>аутентификации и авторизации для WEB-приложений на Flask</h2>
+        <p>Описание: реализация страницы регистрации и авторизации с помощью микрофреймворка Flask</p>
+        <p>Добро пожаловать, {{ current_user.name }}!</p>
+        <a href="{{ url_for('logout') }}"><button>Выход</button></a>
+    </div>
+</body>
+</html>

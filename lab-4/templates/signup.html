@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="block">
+        <h2>Регистрация</h2>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <form method="POST" action="{{ url_for('signup_post') }}">
+            <input type="text" name="name" placeholder="Имя" required><br><br>
+            <input type="email" name="email" placeholder="Email" required><br><br>
+            <input type="password" name="password" placeholder="Пароль" required><br><br>
+            <button type="submit" class="button button2">Зарегистрироваться</button>
+        </form>
+        <a href="{{ url_for('login_page') }}" class="reg">Вход</a>
+    </div>
+</body>
+</html>
